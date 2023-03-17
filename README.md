@@ -2,4 +2,4 @@
 
 https://react-queue-challenge.vercel.app
 
-![GIF Preview](https://fs.plexidev.org/api/vivaldi_4zsjVIiGAI.gif)
+![GIF Preview](https://github.com/lorencerri/react-queue-challenge/blob/main/preview.gif?raw=true)
