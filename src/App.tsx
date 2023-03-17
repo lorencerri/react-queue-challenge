@@ -79,6 +79,18 @@ function App() {
           </div>
         ))}
       </div>
+      <div id="footer">
+        <a
+          href="https://github.com/lorencerri/react-queue-challenge"
+          target="_blank"
+        >
+          GitHub Code
+        </a>
+        <b style={{ color: "gray" }}> | </b>
+        <a href="https://www.youtube.com/watch?v=B9fmr1TpKHE" target="_blank">
+          Challenge Source
+        </a>
+      </div>
     </div>
   );
 }
