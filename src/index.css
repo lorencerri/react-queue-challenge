@@ -106,3 +106,10 @@ button:focus-visible {
   font-size: 2em;
   color: lightblue;
 }
+
+#itemInput {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 10px;
+  padding: 1em;
+}

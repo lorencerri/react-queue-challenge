@@ -58,6 +58,7 @@ function App() {
         <input
           type="number"
           value={item}
+          id="itemInput"
           placeholder="Items"
           onChange={(e) => {
             setItem(Number(e.target.value));
