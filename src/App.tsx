@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import "./App.css";
 
 function App() {
   const [item, setItem] = useState<number>(0);
   const [queues, setQueues] = useState<number[][]>([[], [], [], [], []]);
+  const [animationParent] = useAutoAnimate();
 
   const addItem = (customItem?: number) => {
     if (!customItem && !item) return;
@@ -69,7 +71,7 @@ function App() {
       </div>
       <div id="checkoutContainer">
         {queues.map((queue) => (
-          <div className="queueContainer">
+          <div className="queueContainer" ref={animationParent}>
             <div className="checkout itemText">
               {queue.reduce((a, b) => a + b, 0)}
             </div>
