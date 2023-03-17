@@ -99,6 +99,9 @@ button:focus-visible {
   height: 100px;
   background-color: #1a1a1a;
   border-radius: 50%;
+}
+
+.itemText {
   line-height: 100px;
   font-size: 2em;
   color: lightblue;

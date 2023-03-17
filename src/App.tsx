@@ -64,9 +64,11 @@ function App() {
       <div id="checkoutContainer">
         {queues.map((queue) => (
           <div className="queueContainer">
-            <div className="checkout"></div>
+            <div className="checkout itemText">
+              {queue.reduce((a, b) => a + b, 0)}
+            </div>
             {queue.map((item) => (
-              <div className="item">{item}</div>
+              <div className="item itemText">{item}</div>
             ))}
           </div>
         ))}
