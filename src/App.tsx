@@ -5,8 +5,8 @@ function App() {
   const [item, setItem] = useState<number>(0);
   const [queues, setQueues] = useState<number[][]>([[], [], [], [], []]);
 
-  const addItem = () => {
-    if (!item) return;
+  const addItem = (customItem?: number) => {
+    if (!customItem && !item) return;
 
     const shortestQueueIndex = queues
       .map((q, index) => ({
@@ -18,7 +18,7 @@ function App() {
     setQueues((queues) => {
       const newQueue = [...queues]; // Copying the array & child ensures it is idempotent
       newQueue[shortestQueueIndex] = [...newQueue[shortestQueueIndex]];
-      newQueue[shortestQueueIndex].push(item);
+      newQueue[shortestQueueIndex].push(customItem || item);
       return newQueue;
     });
 
@@ -36,6 +36,10 @@ function App() {
         return newItems.filter(Number);
       });
     });
+  };
+
+  const addRandomItem = () => {
+    addItem(Math.floor(Math.random() * 30) + 1);
   };
 
   useEffect(() => {
@@ -59,7 +63,8 @@ function App() {
             setItem(Number(e.target.value));
           }}
         />
-        <button onClick={addItem}>Checkout</button>
+        <button onClick={() => addItem()}>Checkout</button>
+        <button onClick={() => addRandomItem()}>Add Random Cart</button>
       </div>
       <div id="checkoutContainer">
         {queues.map((queue) => (
