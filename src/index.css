@@ -94,6 +94,14 @@ button:focus-visible {
   gap: 1em;
 }
 
+.queueContainer > div:nth-child(1) {
+  color: lightcoral;
+}
+
+.queueContainer > div:nth-child(2) {
+  color: lightgreen;
+}
+
 .item {
   width: 100px;
   height: 100px;
